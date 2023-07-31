@@ -7,7 +7,6 @@ export default class Preload extends Phaser.Scene {
         this.load.image("tilesFondo", "./public/assets/images/sky.png");
         this.load.image("tilesPlataforma", "./public/assets/images/platform.png");
         this.load.image("tilesPlataformaN", "./public/assets/images/platformN.png");
-        this.load.image("ball", "./public/assets/images/pelota.png");
         this.load.image("door", "./public/assets/images/agujero.png");
         this.load.image("star", "./public/assets/images/star.png");
         this.load.tilemapTiledJSON("map3", "./public/tilemaps/nivel3.json");
@@ -37,8 +36,8 @@ export default class Preload extends Phaser.Scene {
         this.load.image("teclado","./public/assets/images/teclado.png");
         this.load.image("opcion","./public/assets/images/opcion.png");
         this.load.spritesheet("Cañon", "./public/assets/images/Cañon3.png",{
-            frameWidth: 40,
-            frameHeight: 61,
+            frameWidth: 61,
+            frameHeight: 40,
           });
     } 
 
