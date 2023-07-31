@@ -5,6 +5,7 @@ import Inicio from "./public/assets/scenes/Inicio.js";
 import Controles from "./public/assets/scenes/Controles.js";
 import Mapas from "./public/assets/scenes/Mapas.js";
 import Preload from "./public/assets/scenes/Preloard.js";
+import Derrota from "./public/assets/scenes/Derrota.js";
 
 
 
@@ -35,7 +36,7 @@ const config = {
   // List of scenes to load
   // Only the first scene will be shown
   // Remember to import the scene before adding it to the list
-  scene: [Preload,Inicio,Juego,Ganar,juego3,Controles,Mapas,],
+  scene: [Preload,Inicio,Juego,Ganar,juego3,Controles,Mapas,Derrota],
 };
 
 // Create a new Phaser game instance
