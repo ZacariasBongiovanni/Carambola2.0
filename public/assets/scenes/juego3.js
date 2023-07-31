@@ -165,7 +165,8 @@ export default class juego3 extends Phaser.Scene {
     });
 
     this.canShoot = true;
-  
+    this.input.keyboard.on('keydown-R', this.reiniciar, this);
+
 
   }
   
@@ -260,6 +261,10 @@ export default class juego3 extends Phaser.Scene {
     if (this.timer <= 0) {
      
     }
+  }
+
+  reiniciar(){
+    this.scene.start("juego3");
   }
  
   

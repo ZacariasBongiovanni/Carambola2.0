@@ -191,6 +191,8 @@ export default class juego4 extends Phaser.Scene {
       });
   
       this.canShoot = true;
+      this.input.keyboard.on('keydown-R', this.reiniciar, this);
+
       
       
     }
@@ -291,6 +293,10 @@ export default class juego4 extends Phaser.Scene {
       if (this.timer <= 0) {
         /* this.gameOver = true; */
       }
+    }
+
+    reiniciar(){
+      this.scene.start("juego4");
     }
     
   }

@@ -163,6 +163,8 @@ export default class Juego extends Phaser.Scene {
     });
 
     this.canShoot = true;
+
+    this.input.keyboard.on('keydown-R', this.reiniciar, this);
     
   }
   
@@ -255,6 +257,10 @@ export default class Juego extends Phaser.Scene {
     this.timer++;
     this.timerText.setText("Tiempo " + this.timer);
     
+  }
+
+  reiniciar(){
+    this.scene.start("juego");
   }
 
   
