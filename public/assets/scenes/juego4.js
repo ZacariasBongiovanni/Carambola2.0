@@ -245,10 +245,7 @@ export default class juego4 extends Phaser.Scene {
     } 
 
     Daño(pelota, bomba1) {
-      this.score = this.score -1;
-    this.scoreText.setText(
-      "Tiros Disponibles " + this.score
-    );
+    
     bomba1.destroy();
     this.canShoot = true;
     if(this.score === 0){
