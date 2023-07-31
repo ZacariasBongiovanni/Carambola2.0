@@ -39,6 +39,10 @@ export default class Preload extends Phaser.Scene {
             frameWidth: 61,
             frameHeight: 40,
           });
+    
+        this.load.image("bomb", "./public/assets/images/bomb.png")
+
+
     } 
 
     create(){
