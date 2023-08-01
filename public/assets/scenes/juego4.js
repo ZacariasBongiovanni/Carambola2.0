@@ -71,27 +71,26 @@ export default class juego4 extends Phaser.Scene {
       console.log("spawn point salida ", spawnPoint);
       this.salida = this.physics.add
         .sprite(spawnPoint.x, spawnPoint.y, "door")
-        .setCircle(200, 170, -5)
         .setMaxVelocity(0, 0)
         .setScale(0.1);
         spawnPoint = map.findObject("objetos", (obj) => obj.name === "bomba");
         console.log("spawn point bomba", spawnPoint);
         this.bomba = this.physics.add
           .sprite(spawnPoint.x, spawnPoint.y, "bomb")
-          .setScale(2.5)
+          .setScale(0.2)
           .setVelocity(0, 400)
           .setBounce(1)
-          .setCircle(7, 1, 1)
+          
           .setCollideWorldBounds(true);
 
           spawnPoint = map.findObject("objetos", (obj) => obj.name === "bomba1");
           console.log("spawn point bomba", spawnPoint);
           this.bomba1 = this.physics.add
             .sprite(spawnPoint.x, spawnPoint.y, "bomb")
-            .setScale(2.5)
+            .setScale(0.2)
             .setVelocity(0, 400)
             .setBounce(1)
-            .setCircle(7, 1, 1)
+           
             .setCollideWorldBounds(true);
 
   
@@ -106,7 +105,7 @@ export default class juego4 extends Phaser.Scene {
         }
       });
   
-      this.add.image(400, 20, "barra").setScale(1);
+      //this.add.image(400, 20, "barra").setScale(1);
       this.score = 10;
     this.scoreText = this.add.text(20, 20, "Tiros Disponibles " + this.score, {
       fontSize: "20px",

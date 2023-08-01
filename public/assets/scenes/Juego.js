@@ -69,10 +69,10 @@ export default class Juego extends Phaser.Scene {
       console.log("spawn point bomba", spawnPoint);
       this.bomba = this.physics.add
         .sprite(spawnPoint.x, spawnPoint.y, "bomb")
-        .setScale(2.5)
+        .setScale(0.3)
         .setVelocity(0, 400)
         .setBounce(1)
-        .setCircle(7, 1, 1)
+        
         .setCollideWorldBounds(true);
 
     objectosLayer.objects.forEach((objData) => {
@@ -85,18 +85,18 @@ export default class Juego extends Phaser.Scene {
       }
     });
 
-    this.add.image(400, 20, "barra").setScale(1);
+    //this.add.image(400, 20, "barra").setScale(1);
     this.score = 10;
     this.scoreText = this.add.text(20, 20, "Tiros Disponibles " + this.score, {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
     this.score1 = 0;
     this.score1Text = this.add.text(600, 20, "Mapa 1" , {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
 
     this.time.addEvent({
@@ -110,7 +110,7 @@ export default class Juego extends Phaser.Scene {
     this.timerText = this.add.text(350, 20, "Tiempo " + this.timer, {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
     
     this.score2 = 0

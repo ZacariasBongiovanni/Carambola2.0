@@ -63,7 +63,6 @@ export default class juego3 extends Phaser.Scene {
     console.log("spawn point salida ", spawnPoint);
     this.salida = this.physics.add
       .sprite(spawnPoint.x, spawnPoint.y, "door")
-      .setCircle(200, 170, -5)
       .setMaxVelocity(0, 0)
       .setScale(0.1);
 
@@ -71,10 +70,10 @@ export default class juego3 extends Phaser.Scene {
       console.log("spawn point bomba", spawnPoint);
       this.bomba = this.physics.add
         .sprite(spawnPoint.x, spawnPoint.y, "bomb")
-        .setScale(2.5)
+        .setScale(0.2)
         .setVelocity(0, 400)
         .setBounce(1)
-        .setCircle(7, 1, 1)
+       
         .setCollideWorldBounds(true);
 
 
@@ -88,7 +87,7 @@ export default class juego3 extends Phaser.Scene {
       }
     });
 
-    this.add.image(400, 20, "barra").setScale(1);
+    //this.add.image(400, 20, "barra").setScale(1);
     this.score = 10;
     this.scoreText = this.add.text(20, 20, "Tiros Disponibles " + this.score, {
       fontSize: "20px",
@@ -178,7 +177,7 @@ export default class juego3 extends Phaser.Scene {
    this.jugador.setVelocity(0, 0); // Detener al jugador temporalmente al disparar
    this.jugador.anims.play("space", true);
    this.fire(this.jugador);
-   this.canShoot = false; // El jugador no puede disparar hasta que la pelota se detenga o salga de la pantalla
+   this.canShoot = false; 
    this.TirosHechos++;
   
    this.score--;
@@ -207,7 +206,7 @@ export default class juego3 extends Phaser.Scene {
 
   juntarestrellas(pelota, estrella) {
     estrella.disableBody(true, true);
-    this.score2++; // Incrementar el puntaje de estrellas recolectadas
+    this.score2++; 
    
   }
   Daño(pelota, bomba) {

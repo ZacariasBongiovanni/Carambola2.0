@@ -40,10 +40,11 @@ export default class Preload extends Phaser.Scene {
             frameHeight: 40,
           });
     
-        this.load.image("bomb", "./public/assets/images/bomb.png");
+        //this.load.image("bomb", "./public/assets/images/bomb.png");
         this.load.image("ball", "./public/assets/images/pelota.png");
         this.load.image("Derrota", "./public/assets/images/gameover.png")
         this.load.tilemapTiledJSON("map4", "./public/tilemaps/nivel4.json");
+        this.load.image("bomb","./public/assets/images/bomb.png")
 
 
         
