@@ -14,6 +14,9 @@ export default class Ganar extends Phaser.Scene {
     this.add.image(400, 300, "ganar")
       .setInteractive()
       .on("pointerdown", () => this.scene.start("Inicio"));
+
+    this.add.image(750, 550, "Siguiente").setScale(1).setInteractive()
+    .on("pointerdown", () => this.scene.start("Inicio"));
     
     this.TirosHechosText = this.add.text(330, 196, "" + this.TirosHechos, {
       fontSize: "50px",

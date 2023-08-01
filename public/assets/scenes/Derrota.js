@@ -6,6 +6,6 @@ export default class Derrota extends Phaser.Scene {
     create() {
       this.add.image(400, 300, "Derrota")
         .setInteractive()
-        .on("pointerdown", () => this.scene.start("juego"));
+        .on("pointerdown", () => this.scene.start("Mapas"));
     }
   }
