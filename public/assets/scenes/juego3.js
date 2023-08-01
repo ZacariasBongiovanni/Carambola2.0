@@ -92,7 +92,7 @@ export default class juego3 extends Phaser.Scene {
     this.scoreText = this.add.text(20, 20, "Tiros Disponibles " + this.score, {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
 
     
@@ -100,7 +100,7 @@ export default class juego3 extends Phaser.Scene {
     this.score1Text = this.add.text(600, 20, "Mapa 2", {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
 
     this.time.addEvent({
@@ -114,7 +114,7 @@ export default class juego3 extends Phaser.Scene {
     this.timerText = this.add.text(350, 20, "Tiempo " + this.timer, {
       fontSize: "20px",
       fontStyle: "bold",
-      fill: "#000000",
+      fill: "#87CEEB",
     });
 
   

@@ -10,28 +10,29 @@ export default class Ganar extends Phaser.Scene {
   }
 
   create() {
-    
-    this.TirosHechosText = this.add.text(350, 50, "Tiros Hechos " + this.TirosHechos, {
-      fontSize: "20px",
-      fontStyle: "bold",
-      fill: "#00FF00", 
-    });
- 
-    this.add.text(20, 80, "Cantidad de estrellas recolectadas " + (this.score2 ), {
-      fontSize: "20px",
-      fontStyle: "bold",
-      fill: "#00FF00",
-    });
-
-    this.timer++;
-    this.add.text(350, 20, "Tiempo " + this.timer, {
-      fontSize: "20px",
-      fontStyle: "bold",
-      fill: "#00FF00",
-    });
 
     this.add.image(400, 300, "ganar")
       .setInteractive()
       .on("pointerdown", () => this.scene.start("Inicio"));
+    
+    this.TirosHechosText = this.add.text(330, 196, "" + this.TirosHechos, {
+      fontSize: "50px",
+      fontStyle: "bold",
+      fill: "#87CEEB", 
+    });
+ 
+    this.add.text(500, 460, " " + this.score2, {
+      fontSize: "50px",
+      fontStyle: "bold",
+      fill: "#87CEEB",
+    });
+
+    this.timer++;
+    this.add.text(375, 320, "" + this.timer, {
+      fontSize: "50px",
+      fontStyle: "bold",
+      fill: "#87CEEB",
+    });
+
   }
 }
